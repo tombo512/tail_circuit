@@ -1,4 +1,6 @@
 # tail_circuit
+Arduino Nanoで尾翼（rudder, elevator）サーボモータを動かすプログラムです．
+rudderは右左のスイッチ，elevatorはスライド式可変抵抗を用いています．
 
 ## 1. ライブラリインポート
 このコードはVerSpeedServoというライブラリをインポートしています．
@@ -7,4 +9,4 @@ Arduinoフォルダ下のLibraryフォルダに以下で配布されているヘ
 [VerSpeedServo](https://github.com/netlabtoolkit/VarSpeedServo)
 
 ## 2. 拡張子
-Arduino IDEのスケッチは拡張子が.inoになります．エディタでコーディングする際は.cppを使用した方がシンタックスハイライトが入ってやりやすいですが，スケッチで読み込む際は.inoに変更してください．
+Arduino IDEのスケッチは拡張子が.inoになります．エディタでコーディングする際は.cppを使用した方がシンタックスハイライトが入ってやりやすいですが，スケッチで読み込む際は.inoに変更してください.
