@@ -8,5 +8,9 @@ Arduinoフォルダ下のLibraryフォルダに以下で配布されているヘ
 
 [VerSpeedServo](https://github.com/netlabtoolkit/VarSpeedServo)
 
+(2018/05/13追記)
+VerSpeedServoの使用は取りやめました．
+現在のバージョンでは通常のServo.hをインクルードしています．
+
 ## 2. 拡張子
 Arduino IDEのスケッチは拡張子が.inoになります．エディタでコーディングする際は.cppを使用した方がシンタックスハイライトが入ってやりやすいですが，スケッチで読み込む際は.inoに変更してください.

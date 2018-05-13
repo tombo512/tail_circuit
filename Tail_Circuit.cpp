@@ -2,7 +2,7 @@
 
 *******************
   Tail_Circuit
-  1.0 beta
+  1.1 beta
 
   2018/5/5
   R.Hirota
