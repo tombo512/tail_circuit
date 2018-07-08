@@ -64,16 +64,16 @@ void setup() {
 }
 
 int check(bool val_1, bool val_2){
-  bool check_mlt = val_1*val_2;
+  bool check_mlt = val_1 * val_2;
   return check_mlt;
 }
 
 int iterWrite(Servo servo, int former_angle, int angle){
   int dev = angle - former_angle;
-  int dev_abs = ((dev >> 31) | 1) * dev; //calculate abs
   int dev_sgn = (dev >> 31) | 1; //calculate sgn
-  for(int i=0; i < dev_abs + 1; i++){
-    servo.write(former_angle + i*dev_sgn);
+  int dev_abs = - dev_sgn * dev; //calculate abs
+  for(int i = 0; i < dev_abs + 1; i++){
+    servo.write(former_angle + i * dev_sgn);
     delay(20);
   }
   return 0;
@@ -86,7 +86,7 @@ void loop(){
     
     if(!check(val_right, val_left)){
       rudder_angle = 
-        CENTER_RDR_ANGLE - MAX_RDR_ANGLE*val_left + MAX_RDR_ANGLE*val_right;
+        CENTER_RDR_ANGLE - MAX_RDR_ANGLE * val_left + MAX_RDR_ANGLE * val_right;
       digitalWrite(LED_PIN_1, val_right);
       digitalWrite(LED_PIN_3, val_left);
       if(rudder_angle == rudder_angle_former){
@@ -110,10 +110,10 @@ void loop(){
 
    val_elv = val_elv_sum / 5;
    
-   elevator_angle = CENTER_ELV_ANGLE + (val_elv - 63.5)/63.5 * MAX_ELV_ANGLE;
+   elevator_angle = CENTER_ELV_ANGLE + (val_elv - 63.5) / 63.5 * MAX_ELV_ANGLE;
    elevator.write(elevator_angle);
 
-   if(time_counter%(elevator_angle - 76) == 0){
+   if(time_counter % (elevator_angle - 76) == 0){
      digitalWrite(LED_PIN_2, HIGH);
      delay(5);
     }else{
