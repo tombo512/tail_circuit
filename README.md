@@ -3,7 +3,7 @@ Arduino Nanoで尾翼（rudder, elevator）サーボモータを動かすプロ�
 rudderは右左のスイッチ，elevatorはスライド式可変抵抗を用いています．
 
 ## 1. ライブラリインポート
-このコードはVerSpeedServoというライブラリをインポートしています．
+~~このコードはVerSpeedServoというライブラリをインポートしています．
 Arduinoフォルダ下のLibraryフォルダに以下で配布されているヘッダーファイルをインストールしてください．
 
 [VerSpeedServo](https://github.com/netlabtoolkit/VarSpeedServo)
